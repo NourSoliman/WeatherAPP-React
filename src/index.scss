@@ -69,24 +69,27 @@ button {
 }
 
 .icons {
-  position: $postion1;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
   bottom: 0;
-  left: 0;
   right: 0;
+  left: 0;
   text-align: center;
+}
+
+#icons {
+  text-align: center;
+  padding: 5px;
   font-size: 25px;
   cursor: pointer;
 }
-i {
-  padding: 5px;
-}
-@each $name , $color in $icons {
-  ##{$name} {
+
+@each $name ,
+$color in $icons {
+  .#{$name} {
     color: white;
   }
 }
+
 @media screen and (max-width: 600px) {
   .header {
     position: $postion;
@@ -117,8 +120,7 @@ i {
     position: $postion;
     bottom: 80px;
   }
-
   .icons {
-    top: -10px;
+    bottom: -30px;
   }
 }
